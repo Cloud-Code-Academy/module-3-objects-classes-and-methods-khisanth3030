@@ -110,21 +110,24 @@ public with sharing class ClassesObjectsMethods {
      * This method takes a string as a parameter, and calculates the number of vowels in the string.
      * For simplicity, we will consider only five vowels: 'a', 'e', 'i', 'o', 'u', and we will ignore case.
      * Example: countVowels("Hello World!") should return 3
-     * @param s The string in which to count vowels.
+     * @param str The string in which to count vowels.
      * @return The number of vowels in the string.
      */
     public static Integer countVowels(String str) {
         // Initialize the result Integer
+        Integer result = 0;
+        // get individual characters from the string - hint use substring or split
+        String noSpaces = str.remove(' ');
 
-        /*
-        for () {
-            // get individual characters from the string - hint use substring or split
-            // check if the character is a vowel
-            // if it is a vowel, increment the result Integer
+        for (Integer i = 0; i < noSpaces.length(); i++) {
+            String character = noSpaces.substring(i, i+1);
+             // check if the character is a vowel
+             if (character == 'a' || character == 'e' || 
+             character == 'i' || character == 'o' || character == 'u') {
+                 result++; // if it is a vowel, increment the result Integer
+             }
         }
-        */
-
-        return null; // Replace null with the variable you used to store the result
+         return result; 
     }
 
     /**
