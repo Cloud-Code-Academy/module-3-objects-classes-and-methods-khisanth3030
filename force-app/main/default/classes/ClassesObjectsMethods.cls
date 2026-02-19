@@ -174,7 +174,7 @@ public with sharing class ClassesObjectsMethods {
 
         // Calculate the absolute difference using Math.abs() function
         Double result = Math.abs(aSquared - bSquared);
-        
+
         // Return the result
         return result; // Replace null with the variable you used to store the result
     }
@@ -186,10 +186,17 @@ public with sharing class ClassesObjectsMethods {
      * @return A integer between 50 and 100.
      */
     public static Integer generateRandomNumber() {
+ 
         // Use Math class to generate number between 50 and 100
+        // Generates a random integer between 1 (inclusive) and 100 (inclusive)
+        Integer minVal = 50;
+        Integer maxVal = 100;
+        
+        // Formula: Math.floor(Math.random() * (max - min + 1)) + min 
+        Integer result = minVal + Integer.valueOf(Math.random() * (maxVal - minVal + 1));
 
         // Return the random integer
-        return null; // Replace null with the variable you used to store the result
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
