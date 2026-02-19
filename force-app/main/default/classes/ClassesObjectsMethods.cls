@@ -191,7 +191,7 @@ public with sharing class ClassesObjectsMethods {
         // Generates a random integer between 1 (inclusive) and 100 (inclusive)
         Integer minVal = 50;
         Integer maxVal = 100;
-        
+
         // Formula: Math.floor(Math.random() * (max - min + 1)) + min 
         Integer result = minVal + Integer.valueOf(Math.random() * (maxVal - minVal + 1));
 
@@ -206,12 +206,16 @@ public with sharing class ClassesObjectsMethods {
      * @return The current date in the current user locale format.
      */
     public static String getCurrentDate() {
+        String result = '';
+
         // Get the todays date
+        Date today = Date.today();
 
         // Format the current date
-
+        result = today.format();
+        
         // Return the result
-        return null; // Replace null with the variable you used to store the result
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
