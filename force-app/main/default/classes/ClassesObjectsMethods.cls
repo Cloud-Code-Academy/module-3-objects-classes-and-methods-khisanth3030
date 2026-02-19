@@ -213,7 +213,7 @@ public with sharing class ClassesObjectsMethods {
 
         // Format the current date
         result = today.format();
-        
+
         // Return the result
         return result; // Replace null with the variable you used to store the result
     }
@@ -225,15 +225,27 @@ public with sharing class ClassesObjectsMethods {
      * @return The number of the day of the week for the given date.
      */
     public static String getDayOfWeek(DateTime dt) {
+        String result = '';
+
         // Define a map of day of the week as a key and day number as the value
         // Monday = 1, Tuesday = 2, etc.
-
+        Map<String, String> dayOfWeekMap = new Map<String, String>{
+            'Monday' => '1',
+            'Tuesday' => '2',
+            'Wednesday' => '3',
+            'Thursday' => '4',
+            'Friday' => '5',
+            'Saturday' => '6',
+            'Sunday' => '7'
+        };
         // Get the day name using .format('EEEE');
+        String dayName = dt.format('EEEE');
 
         // Get the day number from the map using the day name
-
+        result = dayOfWeekMap.get(dayName);
+        
         // Return the result as a string
-        return null; // Replace null with the variable you used to store the result
+        return result; // Replace null with the variable you used to store the result
     }
 
 
