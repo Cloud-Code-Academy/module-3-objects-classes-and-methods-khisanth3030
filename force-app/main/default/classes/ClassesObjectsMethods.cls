@@ -261,7 +261,7 @@ public with sharing class ClassesObjectsMethods {
     public static Integer calculateYearDifference(Date d1, Date d2) {
         Integer result = 0;
         if(d1 == null || d2 == null) {return null;}
-        
+
         // Subtract the difference in years
         result = Math.abs(d1.year() - d2.year());
 
@@ -277,19 +277,22 @@ public with sharing class ClassesObjectsMethods {
      */
     public class Book {
         // Declare three public instance variables - title, author, pages
-        // title
-        // author
-        // pages
+        String title;
+        String author;
+        Integer pages;
     
         // Book constructor to initialize the title and author
-        public Book() {
+        public Book(String title, String author) {
             // Initialize the title and author
+            this.title = title;
+            this.author = author;
         }
     
         // Method that returns the details of the book
         public String getBookDetails() {
+            String details = 'Title: ' + this.title + ', Author: ' + this.author;
             // return A string containing the details of the book in the format "Title: <title>, Author: <author>"
-            return null; // Replace null with the variable you used to store the result
+            return details; // Replace null with the variable you used to store the result
         }
     }
     
