@@ -361,18 +361,31 @@ public with sharing class ClassesObjectsMethods {
         private Integer age;
         
         // Constructor to initialize the name and age
-    
+        public Person(String name, Integer age) {
+            // Initialize the name and age
+            this.name = name;
+            this.age = age;
+        }
+
         // Method introduceYourself that returns the details of the person        
         // Return a string in the format "Hello, my name is <name> and I am <age> years old."
         // For example, introduceYourself() should return a string like "Hello, my name is John Doe and I am 28 years old."
+        public String introduceYourself() {
+            String details = 'Hello, my name is ' + this.name + ' and I am ' + this.age + ' years old.';
+            return details; 
+        }
 
         // Getter method that returns the name of the person
+        public String getName() {return name;}
 
         // Getter method that returns the age of the person
+        public Integer getAge() {return age;}
 
         // Setter method that sets the name of the person
+        public void setName(String name) {this.name = name;}
 
         // Setter method that sets the age of the person
+        public void setAge(Integer age) {this.age = age;}
     }
 
     /**
@@ -386,14 +399,18 @@ public with sharing class ClassesObjectsMethods {
         List<String> results = new List<String>();
         // Create a new instance of Person class
         // Name the person 'John Doe' and set the age to 28
+        Person personJD = new Person('John Doe', 28);
 
         // Add the details of the person using the introduceYourself method
+        results.add(personJD.introduceYourself());
 
         // Get the name of the person using the getter method and add it to the list
+        results.add(personJD.getName());
 
         // Get the age of the person using the getter method and add it to the list
-        
-        return null; // Replace null with the variable you used to store the result
+        results.add( personJD.getAge().toString() );
+
+        return results; // Replace null with the variable you used to store the result
     }
 
     /**
