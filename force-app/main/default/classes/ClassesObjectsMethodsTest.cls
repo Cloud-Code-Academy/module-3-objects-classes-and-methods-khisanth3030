@@ -183,8 +183,8 @@ public with sharing class ClassesObjectsMethodsTest {
         result = ClassesObjectsMethods.calculateYearDifference(null, null);
         Assert.isNull(result, 'Year difference should be null if both dates are null');
     }
-
-    /* //UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
+/*
+ //UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
     @IsTest
     static void testBookClass() {
         // Initialize a new book instance
@@ -198,7 +198,7 @@ public with sharing class ClassesObjectsMethodsTest {
         String bookDetails = myBook.getBookDetails();
         Assert.areEqual('Title: 1984, Author: George Orwell', bookDetails, 'The book details should be correctly formatted');
     }
-    */
+    
 
     @IsTest
     static void testCreateAndGetBookDetails() {
@@ -211,8 +211,8 @@ public with sharing class ClassesObjectsMethodsTest {
         // Use the Assert class to check that the result matches the expected result
         Assert.areEqual(expectedResult, result, 'The method should return the correct book details');
     }
-
-    /* //UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
+/*
+ //UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
     @IsTest
     static void testGenerateBookList() {
         // Create a Book instance
