@@ -425,7 +425,6 @@ public with sharing class ClassesObjectsMethods {
         if(name==null || age==null){return null;}
         Person newPerson = new Person(name, age);
 
-
         // Return the new instance of the Person class
         return newPerson; // Replace null with the variable you used to store the result
     }
@@ -440,15 +439,14 @@ public with sharing class ClassesObjectsMethods {
      * @return A list of new Person objects.
      */
     public static List<Person> createMultiplePersons(List<String> names, Integer age) {
-
-        // Loop through each name in the provided list of names
-            // Create a new Person object for each name
-            
-            // Add the new Person object to the list of Person objects
-        
-        
+            List<Person> personList = new List<Person>();
+            if(names == null || age == null){return null;}
+            for(String name : names){ // Loop through each name in the provided list of names
+                Person newPerson = new Person(name, age); // Create a new Person object for each name
+                personList.add(newPerson); // Add the new Person object to the list of Person objects
+            }
         // Return the list of Person objects
-        return null; // Replace null with the variable you used to store the result
+        return personList; // Replace null with the variable you used to store the result
     }
 
 
